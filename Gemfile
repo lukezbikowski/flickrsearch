@@ -10,7 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
 gem 'sass-rails', '~> 4.0.3'
 gem 'sprockets-rails', '>= 2.1.4'
-gem 'activerecord-nulldb-adapter'
+gem 'pg'
 gem 'turbolinks'
 gem 'uglifier', '>= 1.3.0'
 
