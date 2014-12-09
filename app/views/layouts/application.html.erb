@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FlickrSearch</title>
+  <title>Flickr Search</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+ <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Flickr search</a>
+        <%= form_tag "/", method: "get", class: "navbar-form navbar-left", role: "search" do %>
+          <div class="form-group">
+          <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search" %>
+          </div>
+          <%= submit_tag "Search", class: "btn btn-primary" %>
+        <% end %>
+      </div>
     </div>
-  </div>
-
+  </nav>
   <div class="container">
     <%= yield %>
-  </div> <!-- /container -->
-  <footer>
-  </footer>
-
+  </div>
 </body>
 </html>
