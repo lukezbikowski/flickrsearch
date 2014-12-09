@@ -1,0 +1,7 @@
+<%# I know it's not a proper usage of col-md-3 but I am short on time so need to compromise %>
+<div class="thumbnail col-md-3" data-toggle="modal" data-target="#bigPhoto" data-imageurl="<%= photo.try :url_z %>" data-title="<%= photo.title %>">
+  <%= image_tag photo.try :url_q %> <%# dirty %>
+  <div class="caption">
+    <h5><%= photo.title %></h5>
+  </div>
+</div>
